@@ -21,4 +21,21 @@ const ninja = new Ninja("brihan", 500);
 ninja.sayName();
 ninja.showStats();
 ninja.drinkSake();
-ninja.showStats();
+
+// actualizacion SuperNinja
+class superNinja extends Ninja {
+    constructor(sabiduria) {
+        super("SuperNinja", 200, sabiduria);
+        this.fuerza = 10;
+        this.velocidad = 10;
+        this.sabiduria = 10 || sabiduria;
+    }
+    speakWisdom() {
+        super.drinkSake();
+        console.log("Lo que un programador puede hacer en un mes, dos programadores pueden hacerlo en dos meses.");
+    }
+}
+
+const ninjaSuper = new superNinja("20");
+ninjaSuper.speakWisdom();
+ninjaSuper.showStats();
